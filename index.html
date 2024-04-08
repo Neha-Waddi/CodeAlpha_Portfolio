@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-Neha</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/0482419ee4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <h1 class="name">    </h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text typewriter">
+        <h1>Hi, I'm <span>Neha</span></h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/download.jpeg" alt="about">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p class="abt-text">I'm a web developer with a passion for creating user-friendly and visually appealing web experiences. I am working with technologies like HTML, CSS, JavaScript, and Nextjs., and I enjoy collaborating with designers and other developers to bring projects to life.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links " onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><p>Web Development</p><span>HTML,CSS,Js</span></li>
+              <li><p>Languages</p><span>Python,Java,C</span></li>
+              <li><p>Frameworks</p><span>Nextjs</span></li>
+  
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022-26</span><p>Btech in Computer science and engineering at ANITS College</p></li>
+              <li><span>2020-22</span><p>Intermediate at sri chaitanya college</p></li>
+
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Development</h2>
+          
+        </div>
+        <div>
+          <i class="fa-brands fa-java"></i>
+          <h2>Java Development</h2>
+          
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>Web Applications Development</h2>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="projects">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="project-list">
+        <div class="project">
+          <img src="images/project1.png">
+          <div class="layer">
+            <h3>Know the Unknown</h3>
+            <p>This website shares scientific updates.Used HTML,CSS and JavaScript to create responsive and visually appealing platform</p>
+            <a href="https://neha-waddi.github.io/knowtheunknown.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="images/project2.png">
+          <div class="layer">
+            <h3>ChatBot</h3>
+            <p>An interactive chatbot designed to provide users with personalized assistance. Whether you're seeking advice, looking for recommendations, or simply want to engage in casual conversation,it is here to help.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>  nehawaddi@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>    8712300857</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+          </div>
+          <a href="#"download class="btn">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name"placeholder="Your Name" required>
+            <input type="email"name="email"placeholder="Your Email"required>
+            <textarea name="Message" rows="6"placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+      } 
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+      } 
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+</body>
+</html>
